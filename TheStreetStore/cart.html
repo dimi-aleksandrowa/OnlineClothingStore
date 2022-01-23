@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head><title> Shopping Cart </title></head>
+    <body>
+        <link rel=stylesheet href="css/cart.css">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js%22%3E">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js%22%3E">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+
+        </div>
+
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("navbar.html");
+            });
+        </script>
+        <!--end of Navigation bar-->
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" style="background: white; margin-left: 750px; font-size: 13px;;">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+            </ol>
+        </nav>
+
+        <!---alert for free delivery --->
+        <div class="alert alert-primary alert-dismissible fade show" role="alert" style="text-align:  center;">
+            <strong>Register now to get FREE DELIVERY for your first order!</strong> <a href="account.html"> Click here to create account! </a>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <!-- end of alert for free delivery --->
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="height: 650px; width: 1200px;">
+                        <div class="container px-4 py-5 mx-auto">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-5">
+                                    <h4 class="heading">Shopping Cart</h4>
+                                </div>
+                                <div class="col-7">
+                                    <div class="row text-right">
+                                        <div class="col-4">
+                                            <h6 class="mt-2 quantity">Quantity</h6>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="mt-2">Price</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center border-top">
+                                <div class="col-5">
+                                    <div class="row d-flex">
+                                        <div class="book"> <a href="yellow-sweater.html"><img src="images/product-1.png" class="book-img"> </a> </div>
+                                        <div class="my-auto flex-column d-flex pad-left">
+                                            <h5 class="mob-text">Yellow Sweater</h5>
+                                            <p class="mb-2 text-muted text-uppercase small">Size: M</p>
+                                            <p class="mb-2 text-muted text-uppercase small"><a href="yellow-sweater.html">View product</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-auto col-7">
+                                    <div class="row text-right">
+                                        <div class="col-4">
+                                            <div class="row d-flex justify-content-end px-3">
+                                                <p>
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                                            class="btn mb-2 mr-2 btn-icon-only rounded-circle btn-outline-dark">
+                                                        <i class="fa fa-minus"></i>
+                                                    </button>
+                                                    <input class="quantity" min="0" name="quantity" value="1" type="number" style="width: 60px;">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                            class="btn mb-2 mr-2 btn-icon-only rounded-circle btn-outline-dark">
+                                                        <i class="fa fa-plus"></i>
+                                                    </button>
+                                                </p>
+                                                <div class="d-flex flex-column plus-minus"> </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="price">$9.99</h5>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="price">
+                                                <i class="bi bi-trash"></i>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center border-top">
+                                <div class="col-5">
+                                    <div class="row d-flex">
+                                        <div class="book"><a href="handbag.html"> <img src="images/bag.jpg" class="book-img"> </a></div>
+                                        <div class="my-auto flex-column d-flex pad-left">
+                                            <h5 class="mob-text">Handbag</h5>
+                                            <p class="mb-2 text-muted text-uppercase small">Size: No Size</p>
+                                            <p class="mb-2 text-muted text-uppercase small"><a href="handbag.html">View product</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="my-auto col-7">
+                                    <div class="row text-right">
+                                        <div class="col-4">
+                                            <div class="row d-flex justify-content-end px-3">
+                                                <p>
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                                            class="btn mb-2 mr-2 btn-icon-only rounded-circle btn-outline-dark">
+                                                        <i class="fa fa-minus"></i>
+                                                    </button>
+                                                    <input class="quantity" min="0" name="quantity" value="1" type="number" style="width: 60px;">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                            class="btn mb-2 mr-2 btn-icon-only rounded-circle btn-outline-dark">
+                                                        <i class="fa fa-plus"></i>
+                                                    </button>
+                                                </p>
+                                                <div class="d-flex flex-column plus-minus"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="price">$13.50</h5>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="price">
+                                                <i class="bi bi-trash"></i>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-3" style="width: 400px; height: 650px; background-color:#f4f4f4;">
+                        <div class="card-header">Summary</div>
+                        <div class="card-body">
+
+                            <button class="btn btn-outline-warning btn-use-code" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Use Promo Code
+                            </button>
+                            <div class="collapse" id="collapseExample">
+                                <br>
+                                <div class="row" style="margin-left: 0px">
+                                    <input type="text" style="width: 150px; background-color: #fff" placeholder="Enter code"><button type="submit" class="btn btn-secondary btn-submit-code" style="margin-left: 10px; border-radius: 20px;">Submit</button>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-between px-4" id="tax"></div>
+                            <div class="row d-flex justify-content-between px-4">
+                                <p class="mb-1 text-left">Subtotal</p>
+                                <h6 class="mb-1 text-right">$23.49</h6>
+                            </div>
+                            <div class="row d-flex justify-content-between px-4">
+                                <p class="mb-1 text-left">Shipping</p>
+                                <h6 class="mb-1 text-right">$2.99</h6>
+                            </div>
+                            <div class="row d-flex justify-content-between px-4" id="tax">
+                                <p class="mb-1 text-left">Total (tax included)</p>
+                                <h6 class="mb-1 text-right">$26.48</h6>
+                            </div>
+                            <br>
+                            <a class="btn btn-block btn-outline-success" href="pay-as.html"> <span> <span>Go to Place Order</span> <span id="check-amt"><i class="bi bi-arrow-right"></i></span> </span> </a>
+                            <br>
+                            <a class="btn btn-block btn-outline-danger" href="index.html"> <span> <span id="checkout"><i class="bi bi-arrow-left"></i></span> <span>Back To Shopping</span> </span> </a>
+                            <br><br>
+                            <p class="mb-2 text-muted small">Prices and delivery costs will be confirmed when you reach "Place Order".</p>
+                            <br>
+                            <p class="mb-2 text-muted small">If you have any questions please visit our <a href="faqs.html">FAQs</a> page.</p> <br>
+                            <p class="">
+                                We Accept
+                                <i class="fa fa-cc-visa" style="color:navy; font-size: 28px;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red; font-size: 28px;"></i>
+                                <i class="fa fa-cc-paypal" style="color:orange; font-size: 28px;"></i>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div id="footer-placeholder">
+
+        </div>
+
+        <script>
+            $(function () {
+                $("#footer-placeholder").load("footer.html");
+            });
+        </script>
+        <!--end of Footer-->
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    </body>
+</html>

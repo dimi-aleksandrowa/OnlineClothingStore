@@ -1,0 +1,231 @@
+/* navbar*/
+.nav-item dropdown:hover{
+    display:contents; 
+}
+
+/* dropdown menu hover */ 
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+    
+}
+.active{
+    margin-left: 20px;
+}
+.nav-link{
+    margin: 4px;
+}
+
+.form-inline{
+    margin-left: 5px;
+}
+.bi-bag{
+    font-size: 30px; 
+    margin-left: 650px;
+    color:black;
+    position: relative;
+}
+.cart-basket{
+  font-size: 15px;
+  position: absolute;
+  top: 36px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  background-color: red;
+  border-radius: 50%;
+  padding: 10px 10px;
+}
+/*media query navbar*/
+@media only screen and (max-width: 600px){
+.nav-item{
+       margin-left: 20px; 
+    }
+    .navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+
+    .form-inline{
+        margin-top: 20px;
+        width: 400px;
+    }
+    .bi-bag{
+       position:relative;
+       margin-left: 10px;
+        font-size: 45px;
+    }
+    .cart-basket{
+        position: absolute;
+        top: 106px;
+        right: 10px;
+    }
+}
+.title{
+	text-align:center;
+	margin-top:10px;
+    margin-bottom: 30px;
+	position:relative;
+	line-height: 60px;
+	color:#555;
+}
+.title::after{
+	content:'';
+	background:#ff523b;
+	width:100px;
+	height:5px;
+	border-radius:15px;
+	position: absolute;
+	
+    top: 60px;
+	left:50%;
+	transform:translateX(-50%);
+}
+h4{
+	color:#555;
+	font-weight:normal;
+}
+
+.col h2{
+    color:#555;
+}
+.col p{
+    font-family:sans-serif;
+}
+@media only screen and (max-width: 600px) {
+  .col img {
+    height: 300px;
+    width: 500px;;
+  }
+    .card img{
+        height: 90px; width: 180px;
+        align-self: center;
+    }
+    .card{
+        margin-left: 130px;
+        margin-bottom: 20px;
+    }
+}
+/**/
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+.bi-person-circle{
+    margin-left: 10px;
+    font-size: 32px;
+    color: black;
+}
+.bi-bag{
+    font-size: 30px; 
+    margin-left: 650px;
+    color:black;
+    position: relative;
+}
+.cart-basket{
+  font-size: 15px;
+  position: absolute;
+  top: 36px;
+  right: 55px;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  background-color: red;
+  border-radius: 50%;
+  padding: 10px 10px;
+}
+
+/**/
+
+.col-md-4 img{
+    width: 180px;
+    height: 90px;
+}
+.footer-container{
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+.col-md-4, .col-md-3, .col-md-2{
+    text-align: left;
+}
+
+.bi-facebook, .bi-twitter, .bi-instagram, .bi-google{
+   font-size: 20px;
+    padding: 10px;
+}
+/*media query for less than 600 screen size*/
+
+@media only screen and (max-width: 600px){
+.col-md-4, .col-md-3, .col-md-2{
+	text-align: center;
+}
+.bi-bag{
+       position:relative;
+       margin-left: 10px;
+        font-size: 40px;
+    }
+    .cart-basket{
+        position: absolute;
+        top: 106px;
+        margin-right: 6px;
+    }
+    .bi-person-circle{
+        font-size: 40px;
+        margin-left: 6px;
+    }
+}
